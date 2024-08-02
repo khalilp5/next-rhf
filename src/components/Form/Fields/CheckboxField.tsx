@@ -12,7 +12,7 @@ const CheckboxField = ({ field }: FieldProps<Checkbox>) => {
       defaultValue={field.defaultValue || false}
       rules={field.validation}
       render={({ field: { onChange, ...rest }, fieldState: { error } }) => (
-        <div>
+        <div className="field">
           <label htmlFor={field.name}>
             <input
               id={field.name}
@@ -20,7 +20,7 @@ const CheckboxField = ({ field }: FieldProps<Checkbox>) => {
               onChange={(e) => onChange(e.target.checked)}
               {...rest}
             />
-            {field.label}
+            <span className="ml-2">{field.label}</span>
           </label>
           {error && <Error error={error} />}
         </div>

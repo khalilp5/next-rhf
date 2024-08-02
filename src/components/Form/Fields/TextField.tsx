@@ -12,8 +12,10 @@ const TextField = ({ field }: FieldProps<InputField>) => {
       control={control}
       rules={field.validation}
       render={({ field: { onChange, ...rest }, fieldState: { error } }) => (
-        <div>
-          <label htmlFor={field.name}>{field.label}</label>
+        <div className="field">
+          <label htmlFor={field.name} className="font-bold">
+            {field.label}
+          </label>
           <input
             id={field.name}
             type={field.type}

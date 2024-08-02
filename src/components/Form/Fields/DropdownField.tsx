@@ -13,8 +13,10 @@ const DropdownField = ({ field }: FieldProps<Dropdown>) => {
       defaultValue={field.defaultValue || ""}
       rules={field.validation}
       render={({ field: { onChange, ...rest }, fieldState: { error } }) => (
-        <div>
-          <label htmlFor={field.name}>{field.label}</label>
+        <div className="field">
+          <label htmlFor={field.name} className="font-bold">
+            {field.label}
+          </label>
           <select id={field.name} onChange={onChange} {...rest}>
             <option disabled value="">
               Select your option

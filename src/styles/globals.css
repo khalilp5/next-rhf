@@ -17,7 +17,6 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
@@ -30,4 +29,17 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.field {
+  @apply flex flex-col gap-1 my-2;
+}
+
+.field input,
+.field select {
+  @apply border border-gray-300 rounded-md p-2;
+}
+
+.button {
+  @apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800;
 }

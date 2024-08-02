@@ -12,8 +12,8 @@ const RadioField = ({ field }: FieldProps<Radio>) => {
       defaultValue={field.defaultValue || ""}
       rules={field.validation}
       render={({ field: { onChange, ...rest }, fieldState: { error } }) => (
-        <div>
-          <label>{field.label}</label>
+        <div className="field">
+          <label className="font-bold">{field.label}</label>
           {field.options.map((option) => (
             <div key={option.value}>
               <input
@@ -24,7 +24,9 @@ const RadioField = ({ field }: FieldProps<Radio>) => {
                 }}
                 {...rest}
               />
-              <label htmlFor={option.value}>{option.label}</label>
+              <label htmlFor={option.value} className="ml-2">
+                {option.label}
+              </label>
             </div>
           ))}
           {error && <Error error={error} />}
