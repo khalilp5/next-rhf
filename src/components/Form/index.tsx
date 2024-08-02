@@ -26,7 +26,7 @@ const Form = ({ schema }: Props) => {
           return <FormField key={index} field={field} />;
         })}
       </FormProvider>
-      <button type="submit" disabled={isSubmitting}>
+      <button type="submit" disabled={isSubmitting} className="button w-full">
         Submit
       </button>
     </form>
